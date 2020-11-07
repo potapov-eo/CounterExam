@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CounterExam/static/css/main.63fdab85.chunk.css",
+    "main.css": "/CounterExam/static/css/main.d1b43ae6.chunk.css",
     "main.js": "/CounterExam/static/js/main.4d20b50f.chunk.js",
     "main.js.map": "/CounterExam/static/js/main.4d20b50f.chunk.js.map",
     "runtime-main.js": "/CounterExam/static/js/runtime-main.d08de18c.js",
@@ -8,15 +8,15 @@
     "static/js/2.d99cf23a.chunk.js": "/CounterExam/static/js/2.d99cf23a.chunk.js",
     "static/js/2.d99cf23a.chunk.js.map": "/CounterExam/static/js/2.d99cf23a.chunk.js.map",
     "index.html": "/CounterExam/index.html",
-    "precache-manifest.350bad7728162cd8fbd06d6a52d601bd.js": "/CounterExam/precache-manifest.350bad7728162cd8fbd06d6a52d601bd.js",
+    "precache-manifest.1754355c87f003da8377df8359404b31.js": "/CounterExam/precache-manifest.1754355c87f003da8377df8359404b31.js",
     "service-worker.js": "/CounterExam/service-worker.js",
-    "static/css/main.63fdab85.chunk.css.map": "/CounterExam/static/css/main.63fdab85.chunk.css.map",
+    "static/css/main.d1b43ae6.chunk.css.map": "/CounterExam/static/css/main.d1b43ae6.chunk.css.map",
     "static/js/2.d99cf23a.chunk.js.LICENSE.txt": "/CounterExam/static/js/2.d99cf23a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d08de18c.js",
     "static/js/2.d99cf23a.chunk.js",
-    "static/css/main.63fdab85.chunk.css",
+    "static/css/main.d1b43ae6.chunk.css",
     "static/js/main.4d20b50f.chunk.js"
   ]
 }
