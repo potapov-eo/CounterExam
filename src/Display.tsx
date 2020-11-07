@@ -2,7 +2,7 @@ import React from 'react';
 
 type DisplayType = {
     count: number
-    maxCount:number
+    maxCount: number
 
 }
 
