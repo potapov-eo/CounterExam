@@ -10,7 +10,7 @@ body {
 
 .App {
     text-align: center;
-    margin: 200px auto;
+    margin: 100px auto;
     color: #282c34;
     border-radius: 10px;
     border: 2px solid #67bcc6;
@@ -21,31 +21,42 @@ body {
 .error {
     font-size: 25px;
     color: red;
-    text-align: center;
-    height: 30px;
+    height: 50px;
     background-color: #282c34;
     border-radius: 8px;
     border: 2px solid #67bcc6;
     padding: 5px;
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .display {
     font-size: 25px;
     color: #67bcc6;
-    text-align: center;
-    height: 30px;
+    height: 50px;
     background-color: #282c34;
     border-radius: 8px;
     border: 2px solid #67bcc6;
     padding: 5px;
-  font-weight: bold;
+    font-weight: bold;
+
+}
+
+.display2 {
+    position: absolute;
+    font-size: 16px;
+    color: #67bcc6;
+    height: 50px;
+    background-color: #282c34;
+    border-radius: 8px;
+    border: 2px solid #67bcc6;
+    padding: 5px;
+    font-weight: bold;
+    position: relative;
 
 }
 
 .displayButton {
-
-    text-align: center;
+    position: relative;
     height: 30px;
     width: 200px;
     border-radius: 8px;
@@ -61,16 +72,33 @@ body {
     border-radius: 8px;
     border: 2px solid #67bcc6;
     padding: 5px;
-    background-color: #67bcc6;
     margin: 0 20px;
-  font-weight: bold;
+    font-weight: bold;
+    background-color: #67bcc6
+
 }
-.buttonDisabled{
+
+.buttonDisabled {
     color: #282c34;
     border-radius: 8px;
     border: 2px solid #67bcc6;
     padding: 5px;
-    background-color: #1a454c;
     margin: 0 20px;
     font-weight: bold;
+
+    background-color: #1a454c;
+}
+.input-field{
+    margin: 5px;
+}
+.input{
+    border: 2px solid #67bcc6;
+    width: 50px;
+    margin-left: 10px;
+}
+.input-error{
+    border: 2px solid #67bcc6;
+    width: 50px;
+    margin-left: 10px;
+    background-color: #e05d5d
 }

@@ -3,6 +3,7 @@ import React from 'react';
 type DisplayType = {
     count: number
     maxCount:number
+
 }
 
 export function Display(props: DisplayType) {

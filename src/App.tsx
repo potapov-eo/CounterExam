@@ -1,50 +1,85 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {ButtonComponent} from "./ButtonComponent";
-import {Display} from "./Display";
+import {Input} from "./Input";
+import Counter from "./Counter";
 
 function App() {
-    const maxCount = 7
-    const minCount = 4
-    let [count, setCount] = useState<number>(minCount)
+    const [maxCount, setMaxCount] = useState<number>(10)
+    const [minCount, setMinCount] = useState<number>(5)
+    const [timeMinValue, setTimeMinValue] = useState<number>(minCount)
+    const [timeMaxValue, setTimeMaxValue] = useState<number>(maxCount)
+    const [activeCounter, setActiveCounter] = useState<boolean>(false)
 
 
-    let changeCount = () => {
-        if (count < maxCount) {
-            setCount(count + 1)
-        }
+    let changTimeMinValue = (newMinCount: number) => {
+        setTimeMinValue(newMinCount)
+        setActiveCounter(false)
     }
-    let resetCount = () => setCount(minCount)
+    let changTimeMaxValue = (newMinCount: number) => {
+        setTimeMaxValue(newMinCount)
+        setActiveCounter(false)
+    }
+    let changeCountInit = () => {
+        setMaxCount(timeMaxValue)
+        setMinCount(timeMinValue)
+     /*   setCount(timeMinValue)*/
+        setActiveCounter(true)
+
+    }
+    let disSet = (timeMinValue > 0) && (timeMinValue !== 0) &&
+        (timeMinValue < timeMaxValue) && (timeMinValue !== timeMaxValue)
+
 
     return (
-        <div className="App">
-            <div className="Counter">
-                <div className="Display">
-                <Display
-                    count={count} maxCount={maxCount}/>
-                </div>
-                <div className="displayButton">
-                    <ButtonComponent
-
-                        id={1}
-                        count={count}
-                        title={"INT"}
-                        changeCount={changeCount}
-                        maxCount={maxCount}
-                        minCount={minCount}
-
-                    />
-                    <ButtonComponent
-                        id={2}
-                        count={count}
-                        title={"RESET"}
-                        changeCount={resetCount}
-                        maxCount={maxCount}
-                        minCount={minCount}
-                    />
-                </div>
+        <div>
+            <div>
+                current minValue = {minCount}
             </div>
+            <div>
+                current maxValue = {maxCount}
+            </div>
+            <Counter minCount={minCount}
+                     maxCount={maxCount}
+                     disSet={disSet}
+                     activeCounter={activeCounter}/>
+
+            <div className="App">
+                <div className="Counter">
+                    <div className="display2">
+                        <div className="input-field">
+                            <span>min value</span>
+                            <span>
+                                <Input disSet={disSet}
+                                       changTimeMinValue={changTimeMinValue}
+                                       value={timeMinValue}/>
+                            </span>
+                        </div>
+                        <div>
+                            <span>max value</span>
+                            <span>
+                                <Input disSet={disSet}
+                                       changTimeMinValue={changTimeMaxValue}
+                                       value={timeMaxValue}/>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div className="displayButton">
+                        <ButtonComponent
+                            dis={!disSet}
+                            id={3}
+
+                            title={"SET"}
+                            changeCount={changeCountInit}
+
+                        />
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     );
 }

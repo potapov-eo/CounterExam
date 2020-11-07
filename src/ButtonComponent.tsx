@@ -2,21 +2,16 @@ import React from 'react';
 
 type ButtonComponentType = {
     id: number
-    count: number
+    count?: number
     title: string
     changeCount: () => void
-    minCount: number
-    maxCount: number
+    dis:boolean
 
 }
 
 export function ButtonComponent(props: ButtonComponentType) {
 
-    let dis = (props.count === props.maxCount && props.id === 1) ||
-        (props.count === props.minCount && props.id === 2)
-    let classbutton = dis? "buttonDisabled": "button"
+       let classButton = props.dis? "buttonDisabled": "button"
 
-
-
-    return <button className={classbutton} disabled={dis} onClick={props.changeCount}>{props.title}</button>
+    return <button className={classButton} disabled={props.dis} onClick={props.changeCount}>{props.title}</button>
 }
